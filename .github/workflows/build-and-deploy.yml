@@ -19,7 +19,7 @@ jobs:
             - name: Build native image
               run: ./build.sh
             - name: Login to Azure
-              uses: azure/Actions/login@v2
+              uses: azure/Actions/login@v1
               with:
                 creds: ${{ secrets.AZURE_CREDENTIALS }}
             - name: 'Deploy to Azure Function'
