@@ -37,11 +37,7 @@
 			<artifactId>spring-context-indexer</artifactId>
 			<optional>true</optional>
 		</dependency>
-			<dependency>
-                <groupId>com.microsoft.azure.functions</groupId>
-                <artifactId>azure-functions-java-library</artifactId>
-                <version>${azure.functions.java.library.version}</version>
-            </dependency>
+
 
 		<!-- Test -->
 		<dependency>
@@ -65,11 +61,31 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<dependency>
+                <groupId>com.microsoft.azure.functions</groupId>
+                <artifactId>azure-functions-java-library</artifactId>
+                <version>${azure.functions.java.library.version}</version>
+            </dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.microsoft.azure</groupId>
+                    <artifactId>azure-functions-maven-plugin</artifactId>
+                    <version>${azure.functions.maven.plugin.version}</version>
+                </plugin>
+		</pluginManagement>
+
+	<build>
 		<plugins>
+			<plugin>
+                    <groupId>com.microsoft.azure</groupId>
+                    <artifactId>azure-functions-maven-plugin</artifactId>
+                    <version>${azure.functions.maven.plugin.version}</version>
+            </plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
