@@ -71,13 +71,11 @@
 
 	<build>
         <pluginManagement>
-            <plugins>
                 <plugin>
                     <groupId>com.microsoft.azure</groupId>
                     <artifactId>azure-functions-maven-plugin</artifactId>
                     <version>${azure.functions.maven.plugin.version}</version>
                 </plugin>
-	    </plugins>
 	</pluginManagement>
 			<plugin>
                     <groupId>com.microsoft.azure</groupId>
