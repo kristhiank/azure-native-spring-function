@@ -78,8 +78,6 @@
                     <version>${azure.functions.maven.plugin.version}</version>
                 </plugin>
 		</pluginManagement>
-
-	<build>
 		<plugins>
 			<plugin>
                     <groupId>com.microsoft.azure</groupId>
